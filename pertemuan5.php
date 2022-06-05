@@ -1,5 +1,6 @@
 <?php
 
+/*
 //switch
 $favcolor = "putih";
 
@@ -40,8 +41,15 @@ for ($x = 0; $x <= 10; $x++) {
 //for each
 $colors = array("red", "green", "blue", "yellow");
 
-foreach ($colors as $value) {
-  echo "$value \n";
+foreach ($colors as $key => $value) {
+  echo "Ini adalah indeks array ke $key = $value \n";
 }
+*/
+
+function writeMsg($pesan) {
+    echo "Pesan lo $pesan";
+  }
+  
+  writeMsg("hehe"); // call the function
 
 ?>
