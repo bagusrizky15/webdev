@@ -37,4 +37,11 @@ for ($x = 0; $x <= 10; $x++) {
 }
 
 
+//for each
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $value) {
+  echo "$value \n";
+}
+
 ?>
