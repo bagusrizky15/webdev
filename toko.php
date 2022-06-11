@@ -1,5 +1,37 @@
 <?php
 
+extract($_POST);
+
+$harga = 0;
+$diskon = 0.7;
+// if ($nm = 1) {
+    switch ($opsi) {
+        case 'b0':
+            $harga = 0;
+            break;
+        case 'b1':
+            $harga = 500000;
+            break;
+        default:
+            $harga = 0;
+            break;
+    }
+// } elseif ($nm = 2) {
+//     switch ($opsi) {
+//         case 'b0':
+//             $harga = 0;
+//             break;
+//         case 'b1':
+//             $harga = 500000;
+//             break;
+//         default:
+//             $harga = 0;
+//             break;
+//     }
+// }
+
+$jmlHarga = $harga * $diskon;
+
 $daftarBarang = array(
     array(
         "Kode" => "1B001",
@@ -72,6 +104,7 @@ $daftarBarang = array(
                     <th scope="col">Diskon</th>
                     <th scope="col">Stok</th>
                     <th scope="col">Beli</th>
+                    <th scope="col">Jumlah</th>
                 </tr>
             </thead>
             <tbody>
@@ -87,17 +120,24 @@ $daftarBarang = array(
                         <td><?php echo $brg["Harga"]; ?></td>
                         <td><?php echo $brg["Diskon"]; ?></td>
                         <td><?php echo $brg[$jml]; ?></td>
-                        <td>
-                            <div class="form-group">
-                                <select class="form-control" id="exampleFormControlSelect1" name="opsi1">
-                                    <?php
-                                        for ($i=0; $i <= $brg[$jml]; $i++) { 
-                                            echo '<option >' . $i . '</option>';
+                        <form action="toko.php" method="POST" enctype="multipart/form-data">
+                            <td>
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1" name="opsi">
+                                        <?php
+                                        for ($i = 0; $i <= $brg[$jml]; $i++) {
+                                            echo "<option value=b.$i.>" . $i . "</option>";
                                         }
-                                    ?>
-                                </select>
-                            </div>
-                        </td>
+                                        ?>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
+                                </div>
+                            </td>
+                        </form>
                     </tr>
                 <?php
                     $nm = $nm + 1;
@@ -108,6 +148,8 @@ $daftarBarang = array(
 
         <br>
         <br>
+
+        <button type="submit" class="btn btn-primary">Checkout</button>
 
         <!-- Optional JavaScript; choose one of the two! -->
 
