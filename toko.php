@@ -126,7 +126,7 @@ $daftarBarang = array(
                                     <select class="form-control" id="exampleFormControlSelect1" name="opsi">
                                         <?php
                                         for ($i = 0; $i <= $brg[$jml]; $i++) {
-                                            echo "<option value=b.$i.>" . $i . "</option>";
+                                            echo "<option value='b.$i.'>" . $i . "</option>";
                                         }
                                         ?>
                                     </select>
@@ -134,7 +134,7 @@ $daftarBarang = array(
                             </td>
                             <td>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" value="<?= $jmlHarga ?>" readonly>
                                 </div>
                             </td>
                         </form>
