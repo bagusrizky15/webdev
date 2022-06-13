@@ -84,15 +84,15 @@ switch ($opsi3) {
         $diskon3 = 0.1;
         break;
     case 'c8':
-        $harga3= 300000 * 8;
+        $harga3 = 300000 * 8;
         $diskon3 = 0.1;
         break;
     case 'c9':
-        $harga3= 300000 * 9;
+        $harga3 = 300000 * 9;
         $diskon3 = 0.1;
         break;
     case 'c10':
-        $harga3= 300000 * 10;
+        $harga3 = 300000 * 10;
         $diskon3 = 0.1;
         break;
 }
@@ -102,7 +102,7 @@ switch ($opsi4) {
         $harga4 = 0;
         break;
     case 'd1':
-        $harga4= 450000;
+        $harga4 = 450000;
         break;
     case 'd2':
         $harga4 = 450000 * 2;
@@ -127,11 +127,11 @@ switch ($opsi5) {
         $diskon5 = 0;
         break;
     case 'e1':
-        $harga5= 570000;
+        $harga5 = 570000;
         $diskon5 = 0.05;
         break;
     case 'e2':
-        $harga5= 570000 * 2;
+        $harga5 = 570000 * 2;
         $diskon5 = 0.05;
         break;
     case 'e3':
@@ -149,7 +149,7 @@ switch ($opsi5) {
 }
 
 
-$jmlHarga = $harga * $diskon + ($harga2 * $diskon2) + ($harga3 * $diskon3) + ($harga4) + ($harga5 * $diskon5) ;
+$jmlHarga = $harga * $diskon + ($harga2 * $diskon2) + ($harga3 * $diskon3) + ($harga4) + ($harga5 * $diskon5);
 
 
 $daftarBarang = array(
@@ -214,9 +214,6 @@ $daftarBarang = array(
         <h3>Daftar harga barang elektronik</h3>
         <br>
         <br>
-        <?php
-        echo $jmlHarga;
-        ?>
 
         <table class="table table-striped">
             <thead>
@@ -350,10 +347,18 @@ $daftarBarang = array(
         <button type="submit" name="submit" class="btn btn-primary">Checkout</button>
 
         <br>
+        <br>
         <div class="form-group">
-            <label for="exampleFormControlInput1">Total</label>
+            <label for="exampleFormControlInput1">Total yang harus dibayarkan : </label>
+            <br>
+            <br>
             <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
         </div>
+
+        <br>
+        <h2>Kwitansi Pembelian</h2>
+        <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
+       
         </form>
 
 
