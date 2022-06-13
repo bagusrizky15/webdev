@@ -11,23 +11,23 @@ switch ($opsi1) {
         break;
     case 'a1':
         $harga = 500000;
-        $diskon = 0.7;
+        $diskon = 0.07;
         break;
     case 'a2':
         $harga = 500000 * 2;
-        $diskon = 0.7;
+        $diskon = 0.07;
         break;
     case 'a3':
         $harga = 500000 * 3;
-        $diskon = 0.7;
+        $diskon = 0.07;
         break;
     case 'a4':
         $harga = 500000 * 4;
-        $diskon = 0.7;
+        $diskon = 0.07;
         break;
     case 'a5':
         $harga = 500000 * 5;
-        $diskon = 0.7;
+        $diskon = 0.07;
         break;
 }
 
@@ -38,20 +38,118 @@ switch ($opsi2) {
         break;
     case 'b1':
         $harga2 = 400000;
-        $diskon2 = 0.2;
+        $diskon2 = 0.02;
         break;
     case 'b2':
         $harga2 = 400000 * 2;
-        $diskon2 = 0.2;
+        $diskon2 = 0.02;
         break;
     case 'b3':
         $harga2 = 400000 * 3;
-        $diskon2 = 0.2;
+        $diskon2 = 0.02;
+        break;
+}
+
+switch ($opsi3) {
+    case 'c0':
+        $harga3 = 0;
+        $diskon3 = 0;
+        break;
+    case 'c1':
+        $harga3 = 300000;
+        $diskon3 = 0.1;
+        break;
+    case 'c2':
+        $harga3 = 300000 * 2;
+        $diskon3 = 0.1;
+        break;
+    case 'c3':
+        $harga3 = 300000 * 3;
+        $diskon3 = 0.1;
+        break;
+    case 'c4':
+        $harga3 = 300000 * 4;
+        $diskon3 = 0.1;
+        break;
+    case 'c5':
+        $harga3 = 300000 * 5;
+        $diskon3 = 0.1;
+        break;
+    case 'c6':
+        $harga3 = 300000 * 6;
+        $diskon3 = 0.1;
+        break;
+    case 'c7':
+        $harga3 = 300000 * 7;
+        $diskon3 = 0.1;
+        break;
+    case 'c8':
+        $harga3= 300000 * 8;
+        $diskon3 = 0.1;
+        break;
+    case 'c9':
+        $harga3= 300000 * 9;
+        $diskon3 = 0.1;
+        break;
+    case 'c10':
+        $harga3= 300000 * 10;
+        $diskon3 = 0.1;
+        break;
+}
+
+switch ($opsi4) {
+    case 'd0':
+        $harga4 = 0;
+        break;
+    case 'd1':
+        $harga4= 450000;
+        break;
+    case 'd2':
+        $harga4 = 450000 * 2;
+        break;
+    case 'd3':
+        $harga4 = 450000 * 3;
+        break;
+    case 'd4':
+        $harga4 = 450000 * 4;
+        break;
+    case 'd5':
+        $harga4 = 450000 * 5;
+        break;
+    case 'd6':
+        $harga4 = 450000 * 6;
+        break;
+}
+
+switch ($opsi5) {
+    case 'e0':
+        $harga5 = 0;
+        $diskon5 = 0;
+        break;
+    case 'e1':
+        $harga5= 570000;
+        $diskon5 = 0.05;
+        break;
+    case 'e2':
+        $harga5= 570000 * 2;
+        $diskon5 = 0.05;
+        break;
+    case 'e3':
+        $harga5 = 570000 * 3;
+        $diskon5 = 0.05;
+        break;
+    case 'e4':
+        $harga5 = 570000 * 4;
+        $diskon5 = 0.05;
+        break;
+    case 'e5':
+        $harga5 = 570000 * 5;
+        $diskon5 = 0.05;
         break;
 }
 
 
-$jmlHarga = $harga * $diskon + ($harga2 * $diskon2);
+$jmlHarga = $harga * $diskon + ($harga2 * $diskon2) + ($harga3 * $diskon3) + ($harga4) + ($harga5 * $diskon5) ;
 
 
 $daftarBarang = array(
@@ -254,7 +352,7 @@ $daftarBarang = array(
         <br>
         <div class="form-group">
             <label for="exampleFormControlInput1">Total</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>"  readonly>
+            <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
         </div>
         </form>
 
