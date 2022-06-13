@@ -5,19 +5,17 @@ extract($_POST);
 $harga = 0;
 $diskon = 0.7;
 
-switch ($opsi) {
-    case 'b0':
-        $harga = 0;
-        break;
-    case 'b1':
+if (isset($_POST['submit'])) {
+    if ($nm = 1 && $i=1) {
         $harga = 500000;
-        break;
-    default:
-        $harga = 0;
-        break;
+    } elseif ($nm = 1 && $i=2) {
+        $harga = 500000*2;
+    }
 }
 
+
 $jmlHarga = $harga * $diskon;
+
 
 $daftarBarang = array(
     array(
@@ -81,6 +79,10 @@ $daftarBarang = array(
         <h3>Daftar harga barang elektronik</h3>
         <br>
         <br>
+        <?php
+            echo $jmlHarga;
+        ?>
+        
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -113,7 +115,7 @@ $daftarBarang = array(
                                         <?php
                                             for ($i=0; $i <= $brg[$jml]; $i++) { 
                                                 # code...
-                                                echo "<option>$i</option>";
+                                                echo "<option value='b.$i.'>$i</option>";
                                             }
                                         ?>
                                     </select>
@@ -132,7 +134,7 @@ $daftarBarang = array(
             </tbody>
         </table>
 
-        <button type="submit" class="btn btn-primary">Checkout</button>
+        <button type="submit" name="submit" class="btn btn-primary">Checkout</button>
         </form>
 
 
