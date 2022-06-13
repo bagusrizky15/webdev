@@ -1,95 +1,10 @@
-<?php
-
-extract($_POST);
-
-$harga = 0;
-$diskon = 0.7;
-// if ($nm = 1) {
-switch ($opsi) {
-    case 'b0':
-        $harga = 0;
-        break;
-    case 'b1':
-        $harga = 500000;
-        break;
-    default:
-        $harga = 0;
-        break;
-}
-// } elseif ($nm = 2) {
-//     switch ($opsi) {
-//         case 'b0':
-//             $harga = 0;
-//             break;
-//         case 'b1':
-//             $harga = 500000;
-//             break;
-//         default:
-//             $harga = 0;
-//             break;
-//     }
-// }
-
-$jmlHarga = $harga * $diskon;
-
-$daftarBarang = array(
-    array(
-        "Kode" => "1B001",
-        "Barang" => "Monitor Samsung 15'",
-        "Harga" => "Rp.500.000",
-        "Diskon" => "7%",
-        $jml => 5,
-    ),
-    array(
-        "Kode" => "2B002",
-        "Barang" => "Monitor LG 14'",
-        "Harga" => "Rp.400.000",
-        "Diskon" => "2%",
-        $jml => 3,
-    ),
-    array(
-        "Kode" => "3B003",
-        "Barang" => "CD-RW Samsung",
-        "Harga" => "Rp.300.000",
-        "Diskon" => "10%",
-        $jml => 10,
-    ),
-    array(
-        "Kode" => "4B004",
-        "Barang" => "Memory Card 256",
-        "Harga" => "Rp.450.000",
-        "Diskon" => "0%",
-        $jml => 6,
-    ),
-    array(
-        "Kode" => "5B005",
-        "Barang" => "Hardisk Seagate 512GB",
-        "Harga" => "Rp.570.000",
-        "Diskon" => "5%",
-        $jml => 5,
-    ),
-);
-?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <style>
-        .gambar {
-            width: 80px;
-        }
-    </style>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
-    <title>Toko Elektronik</title>
+    <title>Nota Pembelian</title>
 </head>
-
 <body>
-    <div class="container my-4">
-        <img class="gambar" src="img/shop.png" alt="">
+<div class="container my-4">
         <h1>Toko Elektronik</h1>
         <h3>Daftar harga barang elektronik</h3>
         <br>
@@ -122,13 +37,7 @@ $daftarBarang = array(
                             <td><?php echo $brg[$jml]; ?></td>
                             <td>
                                 <div class="form-group">
-                                    <select class="form-control" id="exampleFormControlSelect1" name="opsi">
-                                        <?php
-                                        for ($i = 0; $i <= $brg[$jml]; $i++) {
-                                            echo "<option value='b.$i.'>" . $i . "</option>";
-                                        }
-                                        ?>
-                                    </select>
+                                <input type="number" class="form-control" id="exampleFormControlInput1" value="<?= $jmlHarga ?>" readonly>
                                 </div>
                             </td>
                             <td>
@@ -141,12 +50,8 @@ $daftarBarang = array(
                         $nm = $nm + 1;
                     }
                     ?>
-
-                    
             </tbody>
         </table>
-
-        <button type="submit" class="btn btn-primary">Checkout</button>
         </form>
 
 
@@ -163,5 +68,4 @@ $daftarBarang = array(
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     -->
 </body>
-
 </html>
