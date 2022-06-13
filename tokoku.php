@@ -358,7 +358,6 @@ $daftarBarang = array(
         <br>
         <h2>Kwitansi Pembelian</h2>
         <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $jmlHarga ?>" readonly>
-       
         </form>
 
 
