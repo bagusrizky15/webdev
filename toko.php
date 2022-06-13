@@ -4,7 +4,7 @@ extract($_POST);
 
 $harga = 0;
 $diskon = 0.7;
-// if ($nm = 1) {
+
 switch ($opsi) {
     case 'b0':
         $harga = 0;
@@ -16,19 +16,6 @@ switch ($opsi) {
         $harga = 0;
         break;
 }
-// } elseif ($nm = 2) {
-//     switch ($opsi) {
-//         case 'b0':
-//             $harga = 0;
-//             break;
-//         case 'b1':
-//             $harga = 500000;
-//             break;
-//         default:
-//             $harga = 0;
-//             break;
-//     }
-// }
 
 $jmlHarga = $harga * $diskon;
 
@@ -108,7 +95,7 @@ $daftarBarang = array(
                 </tr>
             </thead>
             <tbody>
-                <form action="toko2.php" method="POST" enctype="multipart/form-data">
+                <form action="toko.php" method="POST" enctype="multipart/form-data">
                     <?php
                     $nm = 1;
                     foreach ($daftarBarang as $brg) {
@@ -124,9 +111,10 @@ $daftarBarang = array(
                                 <div class="form-group">
                                     <select class="form-control" id="exampleFormControlSelect1" name="opsi">
                                         <?php
-                                        for ($i = 0; $i <= $brg[$jml]; $i++) {
-                                            echo "<option value='b.$i.'>" . $i . "</option>";
-                                        }
+                                            for ($i=0; $i <= $brg[$jml]; $i++) { 
+                                                # code...
+                                                echo "<option>$i</option>";
+                                            }
                                         ?>
                                     </select>
                                 </div>
@@ -136,13 +124,11 @@ $daftarBarang = array(
                                     <input type="number" class="form-control" id="exampleFormControlInput1" value="<?= $jmlHarga ?>" readonly>
                                 </div>
                             </td>
-                        </tr>
-                    <?php
+                        <?php
                         $nm = $nm + 1;
                     }
-                    ?>
-
-                    
+                        ?>
+                        </tr>
             </tbody>
         </table>
 
