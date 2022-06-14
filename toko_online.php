@@ -37,6 +37,9 @@ $stok = array('5','3','10','6','5');
                         <th scope="col">Stok</th>
                     </tr>
                 </thead>
+                <?php
+                for ($i=0; $i < 5; $i++) 
+                { 
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
@@ -45,6 +48,8 @@ $stok = array('5','3','10','6','5');
                         <td>@mdo</td>
                     </tr>
                 </tbody>
+                }
+                ?>
             </table>
         </form>
     </div>
