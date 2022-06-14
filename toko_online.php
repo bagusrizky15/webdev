@@ -1,7 +1,10 @@
 <?php
 
-$kode = array('1B001',)
-
+$kode = array('1B001','2B002','3B003','4B004','5B005');
+$barang = array('Minotor Samsung', 'Monitor LG', 'CDRW Samsung', 'Memory Card 256gb', 'Hardisk Seagate 512gb');
+$harga = array('500000', '400000', '300000', '450000', '570000');
+$diskon = array('0.07', '0.02', '0.1', '0', '0.05');
+$stok = array('5','3','10','6','5');
 
 ?>
 
@@ -26,10 +29,12 @@ $kode = array('1B001',)
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Kode</th>
+                        <th scope="col">Barang</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Diskon</th>
+                        <th scope="col">Stok</th>
                     </tr>
                 </thead>
                 <tbody>
