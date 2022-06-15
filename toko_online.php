@@ -40,14 +40,22 @@ $stok = array('5','3','10','6','5');
                 <?php
                 for ($i=0; $i < 5; $i++) 
                 { 
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                </tbody>
+                echo
+                "<tbody>".
+                    "<tr>".
+                        "<th>",$i+1,"</th>".
+                        "<td>".$kode[$i]."</td>".
+                        "<td>".$barang[$i]."</td>".
+                        "<td>".$harga[$i]."</td>".
+                        "<td>".$diskon[$i]."</td>".
+                        "<td>".$stok[$i]."</td>".
+                        "<select name='list".$i."'>";
+                        for ($x=0; $x <$stock[$i]; $x++) { 
+                            echo "<option value=".$x.">".$x."</option>";
+                        }
+                        "</select>".
+                    "</tr>".
+                "</tbody>";
                 }
                 ?>
             </table>
