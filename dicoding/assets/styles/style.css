@@ -5,6 +5,14 @@ body {
     font-family: sans-serif;
  }
 
+ .jumbotron {
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+  }
+
  h2 , h3 {
     color: #00a2c6;
  }
@@ -17,7 +25,10 @@ body {
 
  nav a {
     font-size: 18px;
- }
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+  }
 
  nav a:hover {
     font-weight: bold;
@@ -52,3 +63,14 @@ body {
     padding: 20px;
     margin-top: 20px;
  }
+
+ nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+  }
+
+  nav {
+    background-color: #00a2c6;
+    padding: 5px;
+  }
