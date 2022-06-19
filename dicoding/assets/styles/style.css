@@ -18,3 +18,11 @@ body {
  nav a {
     font-size: 18px;
  }
+
+ nav a:hover {
+    font-weight: bold;
+ }
+
+ .profile header {
+    text-align: center;
+ }
