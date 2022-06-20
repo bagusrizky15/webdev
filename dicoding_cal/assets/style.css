@@ -50,3 +50,6 @@
     padding: 30px;
     margin-top: 20px;
  }
+ .button:hover {
+    font-weight: bold;
+  }
