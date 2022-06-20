@@ -80,6 +80,8 @@ body {
   nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
   }
 
   #content {
@@ -103,4 +105,8 @@ body {
      width: 100%;
      padding: 0;
    }
+ }
+
+ header {
+   display: inline;
  }
