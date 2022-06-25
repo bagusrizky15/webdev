@@ -82,7 +82,7 @@ for ($i=0; $i <5 ; $i++) {
                     <th scope="col">No</th>
                     <th scope="col">Kode</th>
                     <th scope="col">Barang</th>
-                    <th scope="col">Harga</th>
+                    <th scope="col">Diskon</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Total Harga</th>
                 </tr>
