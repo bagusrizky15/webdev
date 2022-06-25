@@ -1,10 +1,26 @@
 <?php
 
-$kode = array('1B001','2B002','3B003','4B004','5B005');
+$kode = array('1B001', '2B002', '3B003', '4B004', '5B005');
 $barang = array('Minotor Samsung', 'Monitor LG', 'CDRW Samsung', 'Memory Card 256gb', 'Hardisk Seagate 512gb');
 $harga = array('500000', '400000', '300000', '450000', '570000');
 $diskon = array('0.07', '0.02', '0.1', '0', '0.05');
-$stok = array('5','3','10','6','5');
+$stok = array('5', '3', '10', '6', '5');
+extract($_POST);
+//$jumlah = array();
+$total = array();
+$price = array();
+$list[0] = $list0;
+$list[1] = $list1;
+$list[2] = $list2;
+$list[3] = $list3;
+$list[4] = $list4;
+
+for ($i=0; $i <5 ; $i++) { 
+    # code
+    $price[$i] = $harga[$i]*$diskon[$i];
+    $total[$i] = ($harga[$i]-$price[$i])*$list[$i];
+}
+
 
 ?>
 
@@ -38,28 +54,56 @@ $stok = array('5','3','10','6','5');
                     </tr>
                 </thead>
                 <?php
-                for ($i=0; $i < 5; $i++) 
-                { 
-                echo
-                "<tbody>".
-                    "<tr>".
-                        "<th>",$i+1,"</th>".
-                        "<td>".$kode[$i]."</td>".
-                        "<td>".$barang[$i]."</td>".
-                        "<td>".$harga[$i]."</td>".
-                        "<td>".$diskon[$i]."</td>".
-                        "<td><select name='list".$i."'>";
-                        for ($x=0; $x<=$stok[$i]; $x++) 
-                        { 
-                            echo "<option value=".$x.">".$x."</option>";
-                        }
-                        "</select></td>".
-                    "</tr>".
-                "</tbody>";
+                for ($i = 0; $i < 5; $i++) {
+                    echo
+                    "<tbody>" .
+                        "<tr>" .
+                        "<th>", $i + 1, "</th>" .
+                        "<td>" . $kode[$i] . "</td>" .
+                        "<td>" . $barang[$i] . "</td>" .
+                        "<td>" . $harga[$i] . "</td>" .
+                        "<td>" . $diskon[$i] . "</td>" .
+                        "<td><select name='list" . $i . "'>";
+                    for ($x = 0; $x <= $stok[$i]; $x++) {
+                        echo "<option value=" . $x . ">" . $x . "</option>";
+                    }
+                    "</select></td>" .
+                        "</tr>" .
+                        "</tbody>";
                 }
                 ?>
             </table>
+            <button type="submit" class="btn btn-primary">Beli</button>
         </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Kode</th>
+                    <th scope="col">Barang</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Total Harga</th>
+                </tr>
+            </thead>
+            <?php
+                for ($i = 0; $i < 5; $i++) {
+                    echo
+                    "<tbody>" .
+                        "<tr>" .
+                        "<th>", $i + 1, "</th>" .
+                        "<td>" . $kode[$i] . "</td>" .
+                        "<td>" . $barang[$i] . "</td>" .
+                        "<td>" . $price[$i] . "</td>" .
+                        "<td>" . $list[$i] . "</td>" .
+                        "<td>" . $total[$i] . "</td>" .
+                        "</tr>" .
+                        "</tbody>";
+                }
+                ?>
+        </table>
+
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
