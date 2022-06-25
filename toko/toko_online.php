@@ -49,11 +49,11 @@ $stok = array('5','3','10','6','5');
                         "<td>".$harga[$i]."</td>".
                         "<td>".$diskon[$i]."</td>".
                         "<td>".$stok[$i]."</td>".
-                        "<select name='list".$i."'>";
-                        for ($x=0; $x<$stock[$i]; $x++) { 
+                        "<td><select name='list".$i."'>";
+                        for ($x=0; $x<=$stock[$i]; $x++) { 
                             echo "<option value=".$x.">".$x."</option>";
                         }
-                        "</select>".
+                        "</select></td>".
                     "</tr>".
                 "</tbody>";
                 }
