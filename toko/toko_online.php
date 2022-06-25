@@ -48,9 +48,8 @@ $stok = array('5','3','10','6','5');
                         "<td>".$barang[$i]."</td>".
                         "<td>".$harga[$i]."</td>".
                         "<td>".$diskon[$i]."</td>".
-                        "<td>".$stok[$i]."</td>".
                         "<td><select name='list".$i."'>";
-                        for ($x=0; $x<=$stock[$i]; $x++) 
+                        for ($x=0; $x<=$stok[$i]; $x++) 
                         { 
                             echo "<option value=".$x.">".$x."</option>";
                         }
