@@ -40,7 +40,7 @@
       <td><?= $data['kelas']; ?></td>
       <td><?= $data['gender']; ?></td>
       <td>
-        <a href="edit-data.php?id=<?php $data['id']?>" class="btn btn-warning">Edit</a>
+        <a href="edit-data.php?id=<?= $data['id']?>" class="btn btn-warning">Edit</a>
       </td>
     </tr>
     <?php
