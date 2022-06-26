@@ -13,9 +13,13 @@
 </head>
 
 <body>
+    <?php
+    include 'koneksi.php';
+    $id = $_GET['id'];
+    ?>
     <div class="container">
         <h1>Index Data Mahasiswa</h1>
-        <form action="terima-data.php" method="POST" enctype="multipart/form-data">
+        <form action="terima-edit.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <?php
                 include 'koneksi.php';
                 $id = $_GET['id'];
