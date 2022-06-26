@@ -12,7 +12,6 @@ if (mysqli_connect_errno()) {
     echo "Koneksi Gagal";
 
 }else {
-    echo "Sukses";
 }
 
 ?>

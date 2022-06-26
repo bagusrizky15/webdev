@@ -14,7 +14,8 @@
 
 <body>
     <div class="container">
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <h1>Index Data Mahasiswa</h1>
+        <form action="terima-data.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Nama</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Budi" name="name">

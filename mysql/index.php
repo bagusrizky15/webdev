@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="container">
+    <a href="create.php" class="btn btn-success">Create Data</a>
     <table class="table">
   <thead>
     <tr>
