@@ -41,7 +41,7 @@
       <td><?= $data['gender']; ?></td>
       <td>
         <a href="edit-data.php?id=<?= $data['id']?>" class="btn btn-warning">Edit</a>
-        <a href="delete-data.php?id=<?= $data['id']?>" class="btn btn-danger">Delete</a>
+        <a href="delete-data.php?target=<?= $data['id']?>" class="btn btn-danger">Delete</a>
       </td>
     </tr>
     <?php
