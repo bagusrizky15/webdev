@@ -27,6 +27,10 @@ nav a {
     color: white;
   }
 
+  .jumbotron h3{
+    display: block;
+  }
+
   nav li {
     display: inline;
     list-style-type: none;
