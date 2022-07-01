@@ -92,4 +92,7 @@ nav a {
     right: 0;
   }
   
+  .column {
+    float: left;
+  }
   
