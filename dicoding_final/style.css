@@ -103,15 +103,16 @@ nav {
   justify-content: center;
   grid-auto-flow: column;
   gap: -10px;
+  margin: 50px;
 }
 
 .left {
   margin-left: 100px;
-  width: 50%;
+  width: 25%;
 }
 
 .right {
-  width: 50%;
+  width: 75%;
   padding: 10px;
 }
 
