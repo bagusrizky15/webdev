@@ -10,7 +10,7 @@
         $password = "12345";
 
         function tampilData($conn){
-            $SQL = "SELECT * FROM PEN"
+            $SQL = "SELECT * FROM PEN";
         }
     ?>
 </body>
