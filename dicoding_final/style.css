@@ -177,6 +177,7 @@ img {
 .kontainer {
   padding: 100px;
   display: block;
+  margin-bottom: 200px;
 }
 
 .card {
@@ -195,10 +196,6 @@ img {
 
 .card2 {
   margin-left: 10%;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 #banner2 {
